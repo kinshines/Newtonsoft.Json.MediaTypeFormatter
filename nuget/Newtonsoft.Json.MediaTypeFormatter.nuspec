@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Newton.JsonMediaTypeFormatter</id>
+    <version>1.0.1</version>
+    <title>Newtonsoft.Json.MediaTypeFormatter</title>
+    <authors>kinshines</authors>
+    <owners>kinshines</owners>
+    <licenseUrl>https://raw.githubusercontent.com/kinshines/Newtonsoft.Json.MediaTypeFormatter/master/LICENSE.txt</licenseUrl>
+    <projectUrl>https://github.com/kinshines/Newtonsoft.Json.MediaTypeFormatter</projectUrl>
+    <iconUrl>https://www.newtonsoft.com/content/images/nugeticon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>replace JsonMediaTypeFormatter with Newtonsoft.Json as JsonSerializer</description>
+    <releaseNotes>first release</releaseNotes>
+    <copyright>Copyright 2018</copyright>
+    <tags>Newtonsoft.Json Json.Net MediaTypeFormatter</tags>
+    <dependencies>
+      <dependency id="Newtonsoft.Json" version="12.0.1" />
+      <dependency id="Microsoft.AspNet.WebApi.Client" version="5.2.7" />
+    </dependencies>
+  </metadata>
+</package>
