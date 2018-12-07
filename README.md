@@ -7,9 +7,7 @@ A MediaTypeFormatter for use with ASP.NET Web API to ensure (de)serialization of
 
 ### How to use
 
-The VS2012 project included in the repo can be built directly. I'll try to have a DLL ready for download as well.
-
-The assembly contains `Rnai.WebApi.Tools.Configuration.MediaTypeFormatterConfig` which you can use to register the included `JsonNetMediaTypeFormatter`. A good place to do this would be in your application's `Global.asax`.
+The assembly contains `Newtonsoft.Json.MediaTypeFormatter.Configurations.MediaTypeFormatterConfig` which you can use to register the included `JsonNetMediaTypeFormatter`. A good place to do this would be in your application's `Global.asax`.
 
 ``` csharp
 
