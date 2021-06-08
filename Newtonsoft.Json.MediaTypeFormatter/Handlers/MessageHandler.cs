@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json.MediaTypeFormatter.Extensions;
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
@@ -12,7 +13,7 @@ namespace Newtonsoft.Json.MediaTypeFormatter.Handlers
         protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
             var corrId = Thread.CurrentThread.ManagedThreadId.ToString();
-            var requestInfo = string.Format("{0} {1}", request.Method, request.RequestUri);
+            var requestInfo = string.Format("{0} {1} {2}",request.GetClientIpAddress(), request.Method, request.RequestUri);
             //ignore swagger
             if (request.RequestUri.PathAndQuery.ToLowerInvariant().Contains("/swagger"))
             {

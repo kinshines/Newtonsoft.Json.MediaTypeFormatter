@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Configurations\MediaTypeFormatterConfig.cs" />
     <Compile Include="ContractResolvers\FilteredCamelCasePropertyNamesContractResolver.cs" />
+    <Compile Include="Extensions\HttpRequestMessageExtension.cs" />
     <Compile Include="Extensions\StreamExtension.cs" />
     <Compile Include="Formatters\JsonNetMediaTypeFormatter.cs" />
     <Compile Include="Handlers\MessageHandler.cs" />
