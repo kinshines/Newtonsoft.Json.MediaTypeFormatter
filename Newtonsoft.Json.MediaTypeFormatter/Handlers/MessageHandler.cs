@@ -26,18 +26,16 @@ namespace Newtonsoft.Json.MediaTypeFormatter.Handlers
 
             var response = await base.SendAsync(request, cancellationToken);
 
-            string responseMessage = "";
-
             if (response.IsSuccessStatusCode && CanHandleResponse(response))
             {
-                responseMessage = JsonConvert.SerializeObject(((ObjectContent)response.Content).Value);
+                string responseMessage = JsonConvert.SerializeObject(((ObjectContent)response.Content).Value);
+                await OutgoingMessageAsync(corrId, requestInfo, responseMessage);
             }
             else
             {
-                responseMessage = response.ReasonPhrase;
+                string unSuccess = response.StatusCode + response.ReasonPhrase;
+                await OutgoingMessageAsync(corrId, unSuccess + ":" + requestInfo, null);
             }
-
-            await OutgoingMessageAsync(corrId, requestInfo, responseMessage);
 
             return response;
         }

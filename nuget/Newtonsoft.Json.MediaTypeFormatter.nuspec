@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Newton.JsonMediaTypeFormatter</id>
-    <version>1.0.1</version>
+    <version>1.0.3</version>
     <title>Newtonsoft.Json.MediaTypeFormatter</title>
     <authors>kinshines</authors>
     <owners>kinshines</owners>
@@ -11,7 +11,7 @@
     <iconUrl>https://www.newtonsoft.com/content/images/nugeticon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>replace JsonMediaTypeFormatter with Newtonsoft.Json as JsonSerializer</description>
-    <releaseNotes>first release</releaseNotes>
+    <releaseNotes>log unsuccess status code</releaseNotes>
     <copyright>Copyright 2018</copyright>
     <tags>Newtonsoft.Json Json.Net MediaTypeFormatter</tags>
     <dependencies>
