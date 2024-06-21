@@ -50,6 +50,7 @@
     <Compile Include="ContractResolvers\FilteredCamelCasePropertyNamesContractResolver.cs" />
     <Compile Include="Extensions\HttpRequestMessageExtension.cs" />
     <Compile Include="Extensions\StreamExtension.cs" />
+    <Compile Include="Formatters\AesJsonMediaTypeFormatter.cs" />
     <Compile Include="Formatters\JsonNetMediaTypeFormatter.cs" />
     <Compile Include="Handlers\MessageHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
