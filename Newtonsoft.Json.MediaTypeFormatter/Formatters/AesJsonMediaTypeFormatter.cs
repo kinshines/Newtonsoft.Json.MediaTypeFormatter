@@ -37,6 +37,7 @@ namespace Newtonsoft.Json.MediaTypeFormatter.Formatters
 
         /// <summary>
         /// AES解密后json反序列化
+        /// Request.Content-Type指定text/encrypt
         /// </summary>
         /// <param name="type"></param>
         /// <param name="readStream"></param>
@@ -93,6 +94,7 @@ namespace Newtonsoft.Json.MediaTypeFormatter.Formatters
 
         /// <summary>
         /// json序列化后AES加密输出
+        /// Request.Accept指定text/encrypt
         /// </summary>
         /// <param name="type"></param>
         /// <param name="value"></param>
