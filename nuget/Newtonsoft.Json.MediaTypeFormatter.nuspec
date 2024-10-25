@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Newton.JsonMediaTypeFormatter</id>
-    <version>1.0.3</version>
+    <version>1.0.6</version>
     <title>Newtonsoft.Json.MediaTypeFormatter</title>
     <authors>kinshines</authors>
     <owners>kinshines</owners>

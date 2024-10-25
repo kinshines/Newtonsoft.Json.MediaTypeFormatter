@@ -74,21 +74,27 @@ namespace Newtonsoft.Json.MediaTypeFormatter.Formatters
                 }
             }
 
-            var plain = Encoding.UTF8.GetString(bytes);
-            var decByte = DecryptByte(plain, keyArray);
-
-            using (var memstream = new MemoryStream())
+            try
             {
-                memstream.Write(decByte, 0, decByte.Length);
-                memstream.Position = 0;
-                using (var reader = new JsonTextReader(new StreamReader(memstream)))
+                var plain = Encoding.UTF8.GetString(bytes);
+                var decByte = DecryptByte(plain, keyArray);
+                using (var memstream = new MemoryStream())
                 {
-                    if (typeof(JObject).IsSubclassOf(type))
+                    memstream.Write(decByte, 0, decByte.Length);
+                    memstream.Position = 0;
+                    using (var reader = new JsonTextReader(new StreamReader(memstream)))
                     {
-                        return Task.FromResult(Serializer.Deserialize(reader));
+                        if (typeof(JObject).IsSubclassOf(type))
+                        {
+                            return Task.FromResult(Serializer.Deserialize(reader));
+                        }
+                        return Task.FromResult(Serializer.Deserialize(reader, type));
                     }
-                    return Task.FromResult(Serializer.Deserialize(reader, type));
                 }
+            }
+            catch
+            {
+                throw new ArgumentException("RequestBody Decrypt Fail");
             }
         }
 
